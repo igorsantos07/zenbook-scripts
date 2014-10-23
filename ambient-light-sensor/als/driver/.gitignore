@@ -1,0 +1,8 @@
+/.als.*
+/.tmp_versions
+/Module.symvers
+/als.ko
+/als.mod.*
+/als.o
+/modules.order
+/nbproject/
