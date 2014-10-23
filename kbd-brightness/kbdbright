@@ -1,0 +1,60 @@
+#!/usr/bin/env php
+<?php
+const BRIGHTNESS = '/sys/class/leds/asus::kbd_backlight/brightness';
+$current = (int) trim(file_get_contents(BRIGHTNESS));
+$max     = (int) file_get_contents('/sys/class/leds/asus::kbd_backlight/max_brightness'); 
+
+function help() {
+	echo "-i increases; -d decreases; -s shows info; -h/--help/mistakes shows this.\n\n";
+}
+function notify($current, $msg = null) {
+	switch ($current) {
+		case 0: $icon = 'off';    break;
+		case 1: $icon = 'low';    break;
+		case 2: $icon = 'medium'; break;
+		case 3: $icon = 'full';   break;
+		default: $icon = ($current > 3)? 'full' : 'off'; break;
+	}
+	$msg = $msg?: ucfirst($icon);
+	echo $msg."\n";
+	`notify-send -c 'device' -i notification-keyboard-brightness-$icon 'Keyboard backlight' '$msg'`;
+}
+
+if (!isset($argv[1]))
+	$argv[1] = null;
+
+switch ($argv[1]) {
+	case '-i':
+		if ($current < $max) {
+			file_put_contents(BRIGHTNESS, ++$current);
+			notify($current);
+		}
+		else {
+			$alert = "Already at maximum: $current/$max";
+			notify($current, $alert);
+		}
+
+	break;
+
+
+	case '-d':
+		if ($current > 0) {
+			file_put_contents(BRIGHTNESS, --$current);
+			notify($current);
+		}
+		else {
+			$alert = "Already at minimum: $current/$max";
+			notify($current, $alert);
+		}
+	break;
+
+	case '-s';
+		echo "$current/$max\n";
+	break;
+
+	case '-h':
+	case '--help':
+	default:
+		help();
+	break;
+}
