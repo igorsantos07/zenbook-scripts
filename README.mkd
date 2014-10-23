@@ -1,0 +1,16 @@
+Helpfue resources to make a Zenbook work with Ubuntu
+====================================================
+
+The [Zenbook Ubuntu wiki](https://help.ubuntu.com/community/AsusZenbookPrime) have varied information
+on how to make almost everything work in the notebook. Many information is outdated or for old versions,
+but I guess stuff about SSD drive and power management are still valid. There's also links to how to make
+ambient light sensor work... But this is in this repository as well :)
+
+Here we have three folders:
+
+* `kbd-brightness`: this contains a PHP script (yeah, that's easier for me) to change the keyboard backlight.
+See info in its readme to know what else you would need to do.
+* `ambient-light-sensor`: here's two projects, the ambient light sensor driver and the controller.
+Refer for its instructions on how to setup as well.
+* `displaylink`: here's the trickiest part, how to make a DisplayLink screen work. This is still not working
+with MATE, but it seems fine with Unity.
