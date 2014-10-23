@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR="/opt/ambient-light-sensor"
+DIR="/opt/zenbook/ambient-light-sensor" #is there a way to get the script's dir programatically?
 STATUS=$(als-controller -s)
 if [ "$STATUS" = "0" ]; then
   als-controller -e
