@@ -1,4 +1,4 @@
-Helpfue resources to make a Zenbook work with Ubuntu
+Helpful resources to make a Zenbook work with Ubuntu
 ====================================================
 
 The [Zenbook Ubuntu wiki](https://help.ubuntu.com/community/AsusZenbookPrime) have varied information
