@@ -8,3 +8,6 @@ I added an `install.sh` script so it runs everything it needs to install the
 driver and controller, instead of muggling with the two folder's readmes.
 You might need to tweak the folders inside the script since I just created what
 fits my setup :)
+
+When everything is installed, just add a keyboard shortcut (like <kbd>Super</kbd><kbd>A</kbd>)
+running the `switch` script. You may need to tweak paths in there as well.
