@@ -1,0 +1,3 @@
+[submodule "ambient-light-sensor/als/controller"]
+	path = ambient-light-sensor/als/controller
+	url = git@github.com:danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller.git
