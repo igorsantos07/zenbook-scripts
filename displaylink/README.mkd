@@ -1,0 +1,7 @@
+Using DisplayLink screens with Ubuntu/Zenbook
+=============================================
+
+This is still incomplete work, as it's somewhat working with Unity but not with MATE.
+
+This script is based on the [ArchLinux displaylink script](https://wiki.archlinux.org/index.php/DisplayLink/displaylink.sh),
+and additional instructions were found at [its wiki](https://wiki.archlinux.org/index.php/DisplayLink).
