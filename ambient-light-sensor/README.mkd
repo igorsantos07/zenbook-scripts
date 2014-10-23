@@ -1,0 +1,10 @@
+Helper script to enable/disable ambient light sensor
+====================================================
+
+This was found somewhere and adapted to create better notifications.
+Sorry for not quoting the original author, I can't find where I saw that :(
+
+I added an `install.sh` script so it runs everything it needs to install the
+driver and controller, instead of muggling with the two folder's readmes.
+You might need to tweak the folders inside the script since I just created what
+fits my setup :)
